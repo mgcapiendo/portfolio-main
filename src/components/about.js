@@ -1,9 +1,23 @@
-export function About(props) {
+import { forwardRef } from "react";
+
+const About = forwardRef((props, ref) => {
   return (
-    <div className="about-container">
+    <div className="about-container" ref={ref}>
       <h1 className="about-title">About</h1>
 
-      <h3 className="about-summary">
+      <h2>Who am I?</h2>
+      <h3 className="about-summary-one">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </h3>
+
+      <h2>What do I do?</h2>
+      <h3 className="about-summary-two">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -14,6 +28,6 @@ export function About(props) {
       </h3>
     </div>
   );
-}
+});
 
-export default About;
+export { About };

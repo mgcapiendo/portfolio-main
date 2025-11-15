@@ -1,6 +1,8 @@
-export function Contact() {
+import { forwardRef } from "react";
+
+const Contact = forwardRef((props, ref) => {
   return (
-    <div className="contact-container">
+    <div className="contact-container" ref={ref}>
       <h1>Contact</h1>
       <div className="contact-email-form">
         <h3>Email Form</h3>
@@ -13,6 +15,6 @@ export function Contact() {
       </div>
     </div>
   );
-}
+});
 
-export default Contact;
+export { Contact };

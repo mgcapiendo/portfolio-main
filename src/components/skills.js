@@ -1,6 +1,8 @@
-export function Skills(props) {
+import { forwardRef } from "react";
+
+const Skills = forwardRef((props, ref) => {
   return (
-    <div className="skills-container">
+    <div className="skills-container" ref={ref}>
       {/* make this a map later */}
       <h1>Skills</h1>
       <div className="skills">
@@ -15,6 +17,6 @@ export function Skills(props) {
       </div>
     </div>
   );
-}
+});
 
-export default Skills;
+export { Skills };
