@@ -1,6 +1,8 @@
-export function Experience() {
+import { forwardRef } from "react";
+
+const Experience = forwardRef((props, ref) => {
   return (
-    <div className="experience-container">
+    <div className="experience-container" ref={ref}>
       <h1>Experience</h1>
       <div className="experience">
         <h3>Experience</h3>
@@ -24,6 +26,6 @@ export function Experience() {
       </div>
     </div>
   );
-}
+});
 
-export default Experience;
+export { Experience };

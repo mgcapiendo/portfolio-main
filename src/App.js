@@ -11,52 +11,50 @@ import { Experience } from "./components/experiences";
 import { Contact } from "./components/contact";
 import { Footer } from "./components/footer";
 
-function App() {
-  return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>Edit src/App.js and save to reload.</p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+import { useRef } from "react";
 
+function App() {
+  const contactRef = useRef(null);
+  const experienceRef = useRef(null);
+  const projectsRef = useRef(null);
+  const skillsRef = useRef(null);
+  const aboutRef = useRef(null);
+  return (
     <div>
       {/* art */}
 
       {/* header */}
-      <Header />
+      <Header
+        contactRef={contactRef}
+        experienceRef={experienceRef}
+        projectsRef={projectsRef}
+        skillsRef={skillsRef}
+        aboutRef={aboutRef}
+      />
 
       {/* welcome */}
       <Welcome name="Manuel" role="Full-Stack Developer" />
 
       {/* about */}
-      <About />
+      <About ref={aboutRef} />
 
       {/* education */}
       <Education />
 
       {/* skills */}
-      <Skills />
+      <Skills ref={skillsRef} />
 
       {/* summary of what i do */}
       <Summary />
 
       {/* projects */}
-      <Projects />
+      <Projects ref={projectsRef} />
 
       {/* experiences */}
-      <Experience />
+      <Experience ref={experienceRef} />
 
       {/* contact */}
-      <Contact />
+      <Contact ref={contactRef} />
 
       {/* footer */}
       <Footer />

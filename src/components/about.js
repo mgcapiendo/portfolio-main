@@ -1,6 +1,8 @@
-export function About(props) {
+import { forwardRef } from "react";
+
+const About = forwardRef((props, ref) => {
   return (
-    <div className="about-container">
+    <div className="about-container" ref={ref}>
       <h1 className="about-title">About</h1>
 
       <h3 className="about-summary">
@@ -14,6 +16,6 @@ export function About(props) {
       </h3>
     </div>
   );
-}
+});
 
-export default About;
+export { About };
